@@ -23,7 +23,13 @@
   // echo json_encode($search);
 
   //Carrega um usário usando o login e a senha
-  $usuario = new Usuario();
-  $usuario->login('root','!@#$%123');
-  echo $usuario;
+  // $usuario = new Usuario();
+  // $usuario->login('root','!@#$%123');
+  // echo $usuario;
+  $alt = rand(5, 10);
+  $aluno = new Usuario('aluno'.$alt,'@lun0'.$alt);
+
+  $aluno->insert();
+
+  echo $aluno;
  ?>
