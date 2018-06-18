@@ -26,10 +26,19 @@
   // $usuario = new Usuario();
   // $usuario->login('root','!@#$%123');
   // echo $usuario;
-  $alt = rand(5, 10);
-  $aluno = new Usuario('aluno'.$alt,'@lun0'.$alt);
+//Criando novo usuário
+  // $alt = rand(5, 10);
+  // $aluno = new Usuario('aluno'.$alt,'@lun0'.$alt);
+  //
+  // $aluno->insert();
+  //
+  // echo $aluno;
 
-  $aluno->insert();
+  $usuario = new Usuario();
 
-  echo $aluno;
+  $usuario->loadById(12);
+
+  $usuario->update('professor','!@#$%*');
+
+  echo $usuario;
  ?>
